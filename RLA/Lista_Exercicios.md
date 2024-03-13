@@ -25,7 +25,7 @@ I --> Z
 ```
 1  ALGORITMO verifica_par_impar
 2  DECLARE numero, esto NUMERICO
-3  ESCREVA "Digitr um número:"
+3  ESCREVA "Digite um número:"
 4  LEIA numero
 5  SE numero > 0 ENTAO
 6      resto = numero % 2
