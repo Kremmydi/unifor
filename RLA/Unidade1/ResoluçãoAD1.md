@@ -14,9 +14,12 @@ G --> H([FIM])
 
 #### Pseudocódigo
 ```
-```
 1 ALGORITMO TrocaValores
 2 DECLARE a , b : inteiro;
+3 b ← c
+4 a ← b
+5 c ← a
+6 ESCREVA a , b
+7 FIM_ALGORITMO
 
-```
 ```
