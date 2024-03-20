@@ -82,10 +82,10 @@ FIM ALGORITMO
 ```
 #### Teste de mesa (1.0 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| Salário | Sα >= 500 | Saída |
+|      --      |      --      |      --      |     
+| 500     | V       | Sβ = Sα * 1.1    |  
+| 300   | F          | Sβ = Sα * 1.2        | 
 
 #### EXERCÍCIO 03
 
