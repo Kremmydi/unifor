@@ -51,3 +51,32 @@ I --> Z
 | 0  | V | 0 | V | "O número é par!" |
 | 13 | V | 1 | F | "O número é impar!" |
 | 30 | V | 0 | V | "O número é par!" |
+
+###  Exercício 2
+```mermaid
+flowchart TD
+A([INICIO]) --> B{{Digite um salário:}}
+B --> C[\ㅤ Sα ㅤ\]
+C --> D{S >= 500}
+D --TRUE--> E[Sα * 1.1 = Sβ]
+D --FALSE--> F[Sα * 1.2 = Sβ]
+E --> G{{Sβ}}
+F --> G
+G --> H([FIM])
+```
+
+#### PSEUDOCODIGO
+
+```mermaid
+flowchart TD
+ALGORITMO verificar_NOVO SALARIO
+DECLARE Sα, Sβ NUMERICOS
+ESCREVA "Digite seu salario atual: "
+LEIA Sα
+SE Sα >= 500 ENTAO
+	Sβ = Sα * 1.1
+SENAO
+	Sβ = Sα * 1.2
+ESCREVA "Seu novo salario é: ", Sβ
+FIM ALGORITMO
+```
