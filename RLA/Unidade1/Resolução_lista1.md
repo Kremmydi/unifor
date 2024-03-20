@@ -80,6 +80,12 @@ SENAO
 ESCREVA "Seu novo salario é: ", Sβ
 FIM ALGORITMO
 ```
+#### Teste de mesa (1.0 ponto)
+
+| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+|      --      |      --      |      --      |      --      |      --      | 
+| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
+| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
 
 #### EXERCÍCIO 03
 
