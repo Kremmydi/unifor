@@ -49,7 +49,7 @@ Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (
 ```mermaid
 flowchart TD
 A([INICIO]) --> B{{Digite uma temperatura em celcius: }}
-B --> C[/C/]
+B --> C[/  C  /]
 C --> D[F = 9 * C / 5 + 32]
 D --> E{{"A temperatura em fahrenheit é: ", F}}
 E --> F([FIM])
