@@ -81,7 +81,9 @@ FIM
 | Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
 | verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
 
-#### Fluxograma (1.0 ponto)
+### Exercício 03 (2.5 pontos)
+Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
+O algoritmo deve retornar o resultado da operação selecionada simulando todas as operações de uma calculadora simples.
 
 ```mermaid
 flowchart TD
