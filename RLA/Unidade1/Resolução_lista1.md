@@ -125,9 +125,13 @@ FIM ALGORITMO
 
 
 
-
-
 ```
+#### Teste de mesa (1 ponto)
+
+| N1 | N2 | M | M >= 7.00 | SAIDA |
+|      --      |      --      |      --      |      --      |      --      |
+| 8.00     | 7.00      | 7.50    |  7.50 >= 7.00     | Aluno aprovado |
+| 5.00   | 6.00          | 5.50        | 5.50 <= 7.00 | Aluno reprovado |
 
 #### EXERCÍCIO 04
 
