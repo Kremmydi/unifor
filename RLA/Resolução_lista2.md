@@ -81,6 +81,91 @@ FIM
 | Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
 | verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
 
+#### Fluxograma (1.0 ponto)
+
+```mermaid
+flowchart TD
+A([START]) --> B{{Intruções da calculadora: 1 = adição, 2 = subtração, 3 = multiplição, 4 = divisão, 5 = divisão inteira, 6 = resto da divisão, 7 = exponenciação/radicação}}
+B-->C{{Digite o primeiro número da expressão}}
+C-->D[/N1/]
+D-->E{{Digite o operando com base nas intruções}}
+E-->F[/Op/]
+F-->G{Op >= 1 and Op <= 7}
+G--FALSE-->H{{O número do operando precisa ser maior que um e menor que sete}}
+H-->B
+G--TRUE-->I{{Digite o segundo número da expressão}}
+I-->J[/N2/]
+J-->K{Op == 1}
+K--FALSE-->L{Op == 2}
+K--TRUE-->k(N1 + N2 = Rs)
+k-->R
+L--FALSE-->M{Op == 3}
+L--TRUE-->l(N1 - N2 = Rs)
+l-->R
+M--FALSE-->N{Op == 4}
+M--TRUE-->m(N1 * N2 = Rs)
+m-->R
+N--FALSE-->O{Op == 5}
+N--TRUE-->n{N2 == 0}
+n--FALSE-->n2(N1 / N2 = Rs)
+n--TRUE-->n3{{ERROR: Impossívem dividir por zero}}
+n2-->R
+n3-->B
+O--FALSE-->P{Op == 6}
+O--TRUE-->o(N1 // N2 = Rs)
+o-->R
+P--FALSE-->q
+P--TRUE-->p(N1 % N2 = Rs)
+p-->R
+q(N1 ** N2 = Rs)
+q-->R{{O seu resultado foi Rs}}
+R-->Z([END])
+```
+
+#### Pseudocódigo (1.0 ponto)
+
+```
+ Algoritimo Calculadora
+ DECLARE N1,N2,Rs: float
+	 Op: int
+ INICIO
+ ESCREVA "Intruções da calculadora: 1 = adição, 2 = subtração, 3 = multiplição, 4              
+	  = divisão, 5 = divisão inteira, 6 = resto da divisão, 7 = exponenciação/radicação" 
+ ESCREVA "Digite o primeiro número da expressão"
+ LEIA N1
+ ESCREVA "Digite o operando com base nas intruções"
+ LEIA Op
+ SE Op >= 1 e Op <= 7
+	ESCREVA "Digite o segundo número da expressão"
+	LEIA N2
+	ESCOLHA
+		CASO Op =  1
+			Rs = N1 + N2
+		CASO Op =  2
+			Rs = N1 - N2
+		CASO Op = 3
+			Rs = N1 * N2
+		CASO Op = 4
+		        ENQUANTO N2 == 0 FAÇA
+				ESCREVA "ERROR: impossível dividir por zero, digite um novo denominador"
+				LEIA N2
+			FIM_ENQUANTO
+			Rs = N1 / N2
+		CASO Op = 5
+			ENQUANTO N2 == 0 FAÇA
+				ESCREVA "ERROR: impossível dividir por zero, digite um novo denominador"
+				LEIA N2
+			FIM_ENQUANTO
+			Rs = N1 // N2
+		CASO Op = 6
+			Rs = N1 % N2
+		SENÃO
+ 			Rs = N1 ** N2   
+	FIM_ESCOLHA 
+ESCREVA "O seu resultado foi", Rs    
+FIM_ALGORÍTIMO
+```
+
 ### Exercício 04 (2.5 pontos)
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
 
