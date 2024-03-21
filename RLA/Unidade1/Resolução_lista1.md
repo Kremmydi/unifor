@@ -173,4 +173,11 @@ SENAO
 	SENAO
 		ESCREVA "Verifique novamente sua idade"
 FIM
+```
+#### Teste de mesa (1.0 ponto)
+
+| I1 | I1 >= 18 | I2 | SAIDA | 
+|      --      |      --      |      --      |      --      |
+| 18     | 18 >= 18       | 0    |  Já pode tirar a CNH     |
+| 19   | 19 >= 18          | -1        | Já pode tirar a CNH |``
 
