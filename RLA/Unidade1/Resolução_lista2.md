@@ -89,7 +89,7 @@ O algoritmo deve retornar o resultado da operação selecionada simulando todas 
 flowchart TD
 A([inicio]) --> B{{Digite dois números reais}}
 B --> C[/N1,N2/]
-C --> D{{Defina os operadores}}
+C --> D{{Defina os quatro operadores}}
 D --> E[/''+'' ,''-'' , ''*'' , ''/'' /]
 E --> F{operador é ''+''}
 E --> G{operador é ''-''}
