@@ -280,7 +280,7 @@ E --"i > n"--> J([FIM])
 E --"i=1,2,...,n"--> F{{a}}
 F --> G[termo_atual = a + b]
 G --> H[a = b]
-H --> I[b = termo_atual]
+H --> I[b = T_atual]
 I --LOOP--> E 
 ```
 
@@ -288,21 +288,21 @@ I --LOOP--> E
 
 ```
 Algoritimo fibonacci
-DECLARE T1, T2, Tmem, TS, i: Int
+DECLARE a, b, T_atual, n, i: Int
 INICIO
-T1 = 0
-T2 = 1
+a = 0
+b = 1
 ESCREVA "Digite qual termo de fibonacci você quer calcular"
 LEIA TS
-ENQUANTO TS <= 0 FAÇA
+ENQUANTO n <= 0 FAÇA
 	ESCREVA "Digite um termo válido"
-	LEIA TS
+	LEIA n
 FIM_ENQUANTO
 PARA i DE 1 ATÉ TS [PASSO 1] FAÇA
-	ESRCREVA T1
-	Tmem = T1 + T2
-	T1 = T2
-	T2 = Tmem
+	ESRCREVA a
+	Tmem = a + b
+	a = b
+	b = T_atual
 FIM_PARA
 FIM_ALGORITIMO
 ```
