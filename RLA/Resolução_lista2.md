@@ -81,9 +81,8 @@ FIM
 | Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
 | verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
 
-### Exercício 03 (2.5 pontos)
-Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
-O algoritmo deve retornar o resultado da operação selecionada simulando todas as operações de uma calculadora simples.
+### Exercício 04 (2.5 pontos)
+Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
 
 
 #### FLUXOGRAMA
