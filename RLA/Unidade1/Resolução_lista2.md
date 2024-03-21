@@ -28,7 +28,7 @@ DECLARE N1, N2, N3, N4 INTEIROS
 INICIO
 ESCREVA "Digite quatro numeros inteiros: "
 LEIA N1, N2, N3, N4
-M = N1 + N2 + N3 + N4 / 4 ENTAO
+M = N1 + N2 + N3 + N4 / 4 
 	ESCREVA "A media desses quatro numeros é: ", M
 FIM
 
