@@ -44,7 +44,7 @@ Fluxograma conforme descrição do algoritmo acima, usando o loop ENQUANTO.
 flowchart TD
 A([INICIO])
 A --> C[N_aprov = 0]
-C --> D{{Digite a quanidade de notas para avaliar}}
+C --> D{{Digite o número de notas}}
 D --> E[/N_notas/]
 E --> F{N_notas > 0}
 F --FALSE--> G{{Digite uma quantidade válida}}
