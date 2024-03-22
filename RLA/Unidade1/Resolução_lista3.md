@@ -54,7 +54,7 @@ flowchart TD
 A([INICIO]) --> B{{Defina uma variável:}}
 B --> C[/cont = 0/]
 C --> D{{I = 0 ATÉ 30 PASSO 3}}
-D --> E[cont = + I]
+D --> E[cont = + 3]
 E --> D
 D --> F([FIM])
 
