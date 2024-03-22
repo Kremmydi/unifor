@@ -243,7 +243,7 @@ SE I1 5 >= I1 <= 7 ENTAO
 	ESCREVA "A categoria é infantil A"
 	SENAO
 	8 >= I1 <= 10 ENTAO
-		ESCREVA "A categoria é infantia B"
+		ESCREVA "A categoria é infantil B"
 		SENAO 
 		11 >= I1 <= 13 ENTAO
 			ESCREVA "A categoria é juvenil A"
@@ -252,7 +252,7 @@ SE I1 5 >= I1 <= 7 ENTAO
 				ESCREVA "A categoria é juvenil B"
 				SENAO
 				I1 >= 18 ENTAO 
-					ESCREVA "A categoria é adulto"
+					ESCREVA " a categoria é adulto"
 				FIM_SE
 			FIM_SE
 		FIM_SE
@@ -269,7 +269,7 @@ FIM
 
 | I1 | SAIDA | 
 |      --      |      --      | 
-| 5     | A categoria é infantil A       |
+| 6     | A categoria é infantil A       |
 | 11   | A categoria é juvenil A          |
 | 18   | A categoria é adulta         |
 | 15   | A categoria é juvenil B          |
