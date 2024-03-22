@@ -68,3 +68,27 @@ ESCREVA “Defina uma variável: ”
 		FIM_PARA
 FIM_ALGORITMO
 ```
+
+### Exercício 03 (2.5 pontos)
+Dada uma sequência de números inteiros, calcular a sua soma. 
+Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrever o número 35.
+
+```mermaid
+flowchart TD
+A([INICIO]) --> B{{Digite três valores inteiros:}}
+B --> C[/A , B , C , D/]
+C -->D[S = A + B + C + D]
+D --> E{{Resultado final: R}}
+E --> F([FIM])
+```
+
+#### pseudocódigo
+
+ALGORITMO soma
+DECLARE A ,  B , C , D , S inteiros
+INÍCIO
+ESCREVA "Digite três valores inteiros:"
+LEIA  A ,  B , C , D
+S = A + B + C + D
+	ESCREVA "Resultado final: R: "
+FIM
