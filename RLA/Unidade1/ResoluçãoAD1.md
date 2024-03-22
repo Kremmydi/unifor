@@ -42,23 +42,20 @@ Fluxograma conforme descrição do algoritmo acima, usando o loop ENQUANTO.
 
 ```mermaid
 flowchart TD
-A([INICIO])
-A --> C[N_aprov = 0]
-C --> D{{Digite o número de notas}}
-D --> E[/N_notas/]
-E --> F{N_notas > 0}
-F --FALSE--> G{{Digite uma quantidade válida}}
-G --> E
-F --TRUE--> H{N_notas = N_ver}
-H --TRUE--> I{{A quantidade de notas aprovadas foi N_aprov}}
-H --FALSE--> J{{Insira a nota}}
-J --> K[/nota/]
-K --> L{nota >= 50 e nota <= 100}
-L --TRUE--> M[N_aprov =+ 1]
-M --> N[N_ver =+ 1]
-L --FALSE--> N
-N --> H
-I --> Z([FIM])
+A([INICIO]) --> B{{Digite o número de alunos: }}
+B --> C[\n\]
+C --> D[\cont = 0\]
+D --> E[\i = 1\]
+E --> F{i <= n}
+F --FALSE--> W{{Número de alunos aprovados: cont}}
+W --> Z([FIM])
+F --TRUE--> G{{Digite a nota do aluno, i}}
+G --> H[\nota\]
+H --> I{"nota >= 50 <br>E <br>nota <=100"}
+I --TRUE--> J[\cont =+ 1\]
+I --FALSE--> K[\i =+ 1\]
+J --> K
+K --LOOP--> F
 ```
 #### Pseudocódigo 01 (1 ponto)
 
