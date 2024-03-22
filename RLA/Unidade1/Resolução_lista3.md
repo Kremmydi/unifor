@@ -75,6 +75,16 @@ ESCREVA “Defina uma variável: ”
 		FIM_PARA
 FIM_ALGORITMO
 ```
+#### Teste de Mesa
+| N | cont |  i  | cont = +3 | 
+| -- | -- | -- | --|
+| 30 | 0 | 1 | 3 |
+| 30 | 3 | 2 | 6 |
+| 30 |6 | 3 | 9 |
+| 30 | 9 | 4 | 12 |
+| 30 | 12 | 5 | 15 |
+| ... | ... |...| ... |
+| 30 | 27 | 10 | 30|
 
 ### Exercício 03 (2.5 pontos)
 Dada uma sequência de números inteiros, calcular a sua soma. 
