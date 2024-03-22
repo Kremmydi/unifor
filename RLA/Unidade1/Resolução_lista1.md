@@ -92,14 +92,14 @@ FIM ALGORITMO
 ```mermaid
 flowchart TD
 A([INICIO]) --> B{{Digite a primeira nota: }}
-B --> C[/Nota1/]
+B --> C[/N1/]
 A --> D{{Digite a segunda nota: }}
-D --> E[/Nota2/]
-C --> F[MEDIA == Nota1 + Nota2 / 2]
+D --> E[/N2/]
+C --> F[MEDIA == N1 + N2 / 2]
 E --> F
-F --> G{MEDIA >= 7}
-G --TRUE--> H[O aluno está aprovado com media: MEDIA]
-G --FALSE--> I[O aluno está reprovado com media: MEDIA]
+F --> G{M >= 7}
+G --TRUE--> H[aluno aprovado]
+G --FALSE--> I[aluno reprovado]
 H --> J([FIM])
 I --> J
 
@@ -110,16 +110,16 @@ I --> J
 
 ```
 ALGORITMO verificar_MEDIA
-Declare Nota1, Nota2, MEDIA NUMERICO
+Declare N1, N2, M NUMERICO
 ESCREVA "Digite a primeira nota do aluno: "
 LEIA Nota1
 ESCREVA "Digite a segunda nota do aluno: "
 LEIA Nota2
-MEDIA = (Nota1 +Nota2) / 2
-SE MEDIA >= 7 ENTAO
-	ESCREVA "O aluno foi aprovado com média igual: ", MEDIA
+MEDIA = (N1 +N2) / 2
+SE ME >= 7 ENTAO
+	ESCREVA "aluno aprovado "
 SENAO
-	ESCREVA "O aluno foi reprovado com médiaa igual: ", MEDIA
+	ESCREVA "aluno reprovado "
 FIM ALGORITMO 
 
 
@@ -130,8 +130,8 @@ FIM ALGORITMO
 
 | N1 | N2 | M | M >= 7.00 | SAIDA |
 |      --      |      --      |      --      |      --      |      --      |
-| 8.00     | 7.00      | 7.50    |  7.50 >= 7.00     | Aluno aprovado |
-| 5.00   | 6.00          | 5.50        | 5.50 <= 7.00 | Aluno reprovado |
+| 10.00     | 4.00      | 7.00    |  7.00 >= 7.00     | Aluno aprovado |
+| 4.00   | 7.00          | 6.50        | 6.50 <= 7.00 | Aluno reprovado |
 
 #### EXERCÍCIO 04
 
