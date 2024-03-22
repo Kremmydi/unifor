@@ -39,3 +39,32 @@ REPITA
 FIM_ALGORITMO
 
 ```
+
+### Exercício 02 (2.5 pontos)
+Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
+```mermaid
+flowchart TD
+A([INICIO]) --> B{{Defina uma variável:}}
+B --> C[/cont = 0/]
+C --> D{{I = 0 ATÉ 30 PASSO 3}}
+D --> E[cont = + I]
+E --> D
+D --> F([FIM])
+
+
+```
+
+	#### Pseudocódigo 
+
+```
+Algoritmo ClassificaCategoria
+	DECLARE 30, I, cont: INTEIRO
+INICIO
+ESCREVA “Defina uma variável: ”
+	LEIA cont 
+	cont = 0
+		PARA i DE 0 ATÉ 30 PASSO 3 FAÇA
+			cont = cont + I
+		FIM_PARA
+FIM_ALGORITMO
+```
