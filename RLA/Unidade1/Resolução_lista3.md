@@ -45,7 +45,7 @@ FIM_ALGORITMO
 | 9 | Resto = 9 % 2 |1| "impar" |
 | 24 | Resto = 24 % 2 |0| "par" |
 | 15 | Resto = 15 % 2 |1| "impar" |
-| 3 | Resto = 3 % 2 |1| "impar" |
+| 1 | Resto = 1 % 2 |1| "impar" |
 
 ### Exercício 02 (2.5 pontos)
 Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
