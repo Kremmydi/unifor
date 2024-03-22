@@ -83,7 +83,7 @@ E --> F([FIM])
 ```
 
 #### pseudocódigo
-
+```
 ALGORITMO soma
 DECLARE A ,  B , C , D , S inteiros
 INÍCIO
@@ -92,3 +92,4 @@ LEIA  A ,  B , C , D
 S = A + B + C + D
 	ESCREVA "Resultado final: R: "
 FIM
+```
