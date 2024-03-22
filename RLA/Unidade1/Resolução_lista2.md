@@ -76,10 +76,10 @@ FIM
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+|C | F = 9 / 5 * C + 32 | F | 
+|      --      |      --      |      --      |    
+| 30     |   F = 9 / 5 * 30 + 32      | 86   |  
+| 60   |  F = 9 / 5 * 60 + 32          | 140       | 
 
 ### Exercício 03 (2.5 pontos)
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
