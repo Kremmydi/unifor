@@ -59,29 +59,22 @@ K --LOOP--> F
 ```
 #### Pseudocódigo 01 (1 ponto)
 
-```
-Algoritimo aprovação
-DECLARE N_ver, N_aprov, N_notas, i: Int
-	notas: Float
+```java
+ALGORTIMO ContaAprovacoes
 INICIO
-N_aprov = 0 
-ESCREVA "Digite a quanidade de notas para avaliar"
-LEIA N_notas
-ENQUANTO N_notas <= 0 REPITA
-	ESCREVA "Digite uma quantidade válida"
-	LEIA N_notas
-PARA N_ver DE 1 ATÉ N_notas FAÇA [PASSO 1]
-	ESCREVA "Insira a nota"
-	LEIA nota
-	SE nota >= 50 E nota <= 100
-		N_aprov =+ 1
-		N_ver =+ 1
-	SENÃO
-		N_ver =+ 1
-	FIM_SE
-FIM_PARA
-ESCREVA "A quantidade de notas aprovadas foi", N_aprov
-FIM_ALGORÍRIMO
+    DECLARE n, cont, nota, i: INTEIRO
+    ESCREVA "Digite a quantidade de notas dos alunos:"
+    LEIA n
+    cont = 0        // Inicializa o contador de alunos aprovados
+    PARA i DE 1 ATE n FAÇA
+        ESCREVA "Digite a nota do aluno", i, ":"
+        LEIA nota
+        SE nota >= 50 E nota <= 100 ENTAO
+            cont = cont + 1        // Incrementa o contador de alunos aprovados
+        FIM_SE
+    FIM_PARA
+    ESCREVA "O numero de alunos aprovados e:", cont
+FIM
 ```
 
 ### Questão 3 - Soma de um conjunto de números (1 ponto)
