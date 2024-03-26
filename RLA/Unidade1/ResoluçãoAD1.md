@@ -116,14 +116,14 @@ K --LOOP--> G
 
 ```java
 Algoritmo SomaNumeros
-DECLARE n,i,soma: INTEIRO
+DECLARE n,i,soma: INTEIRO        // Declaração de variáveis
 INICIO
     ESCREVA "Digite a quantidade de números<br> (n >= 0):"
-    LEIA n
-    SE n >=0 ENTAO
+    LEIA n        // Entrada de dados
+    SE n >=0 ENTAO        // Estrutura condicional
         soma <- 0
         i <- i
-        ENQUANTO i <= n FAÇA
+        ENQUANTO i <= n FAÇA        // Teste de condição
             ESCREVA "Digite um número:"
             LEIA num 
             soma <- soma + num
