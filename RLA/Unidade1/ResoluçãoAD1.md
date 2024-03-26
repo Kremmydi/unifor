@@ -157,41 +157,47 @@ $$ S = \frac{1}{2} + \frac{3}{4} + \frac{5}{6} + \frac{7}{8} + \dots $$
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[S = 0]
-B --> D{{Digite a quantidade de termos da série que voce quer somar}}
-D --> E[/Num_termo/]
-E --> F{Num_termo > 0}
-F --FALSE--> G{{Digite uma quantidade válida}}
-G --> E
-F --TRUE--> H{Num_termo = termo}
-H --FALSE--> I[termo =+ 1]
-I --> J["S =+ (2 * termo - 1)/(2 * termo)"]
-J --> H
-H --TRUE--> K{{"O valor da soma de Num_termos termo(s) da série é S"}}
-K --> L([FIM])
+A([INICIO]) --> B{{"Digite o número de termos da série S:"}}
+B --> C[/n/]
+C --> D[S = 0]
+D --> E[[i=0 ATE n-1 PASSO 1]]
+E --"i > n-1"--> J{{"Soma da série S é ", S}}
+J --> K([FIM])
+E --"i=0,1,2,..,n-1"--> F[numerador = 2 * i + 1]
+F --> G[denominador = 2 * i + 2]
+G --> H[termo = numerador / denominador]
+H --> I[S += termo]
+I --LOOP--> E
 ```
 
 #### Pseudocódigo (1 ponto)
 
-```
-Algoritmo soma_da_serie
-DECLARE Num_termo, termo: Int
-	S: Float
+```java
+Algoritmo SomaSerie
+DECLARE n,numerador,denominador: INTEIRO; S: REAL
 INICIO
-S = 0
-ESCREVA "Digite a quantidade de termos da série que você quer somar"
-LEIA Num_termo // 3 
-ENQUANTO Num_termo < 0 FAÇA
-	ESCREVA "Digite uma quantidade válida"
-	LEIA Num_termo
-FIM_ENQUANTO
-PARA termo DE 1 ATÉ Num_termo [PASSO 1] FAÇA
-	S =+ (2 * termo - 1)/(2 * termo)
-FIM_PARA
-ESCREVA "O valor da soma de", Num_termo, "termo(s) da série é", S
-FIM_ALGORITMO
+    ESCREVA "Digite o número de termos da série S:"
+    LEIA n
+    S <- 0
+    PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
+        numerador = 2 * i + 1
+        denominador <- 2 * i + 2
+        termo = numerador / denominador
+        S += termo
+    FIM_PARA
+    ESCREVA "Soma da série S é ", S
+FIM
 ```
 
+#### Tabela de testes (0.25 ponto)
+
+| it | n  | S  | i | numerador | denominador | termo | S += termo     | saída                  |
+| -- | -- | -- |-- | --        | --          | --    | --             | --                     |
+|    | 0  | 0  |   |           |             |       |                |                        |
+| 1  | 4  | 0  | 0 | 2*0+1 = 1 | 2*0+2 = 2   | 1/2   | 0+1/2 = 1/2    |                        |
+| 2  | 4  | 0  | 1 | 2*1+1 = 1 | 2*1+2 = 2   | 3/4   | 1/2+3/4 = 1.25 |                        |
+| 3  | 4  | 0  | 2 | 2*2+1 = 1 | 2*2+2 = 2   | 5/6   | 0+1/2 = 2.08   |                        |
+| 4  | 4  | 0  | 3 | 2*3+1 = 1 | 2*3+2 = 2   | 7/8   | 0+1/2 = 2.96   | Soma da série S é 2.96 |
 
 ### Questão 5 - Cálculo fatorial (2 pontos)
 
@@ -209,41 +215,46 @@ Dado um número $n$, implemente e teste um algoritmo para calcular o fatorial de
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[fato = 1]
-B --> R[n_mult = 0]
-R-->C{{Digite o numero do fatorial que voce quer calcular}}
-C --> D[/n/]
-D --> E{n >= 0}
-E --FALSE--> F{{Digite um fatorial válido}}
-F --> D
-E --TRUE--> G{n = n_mult}
-G --FALSE--> H[n_mult =+ 1]
-H --> I[fato = fato * n_mult]
-I --> G
-G --TRUE--> Y{{O valor do fatorial de n é fato}}
-Y --> Z([FIM]) 
+A([INICIO]) --> B{{"Digite um numero inteiro nao-negativo:"}}
+B --> C[/n/]
+C --> D{n >= 0}
+D --TRUE--> E[fator = 1]
+D --FALSE--> J{{"O valor deve ser maior ou igual a zero!"}}
+J --> I([FIM])
+E --> F[[i=1 ATÉ n PASSO 1]]
+F --"i > n"--> H{{O fatorial de, n, é:, fator}}
+F --"i=1,2,..n"--> G[fator = fator * i]
+G --LOOP--> F
+H --> I
 ```
+
 #### Pseudocódigo (2 pontos)
 
-```
-Algoritmo fatorial
-DECLARE fato, n_mult, n: Int
+```java
+ALGORITMO CalcFatorial
+DECLARE n: INTEIRO
 INICIO
-n_mult = 0
-ESCREVA "Digite o numero do fatorial que voce quer calcular"
-LEIA n
-ENQUANTO n < 0 FAÇA
-	ESCREVA "Digite um fatorial válido"
-	LEIA n
-FIM_ENQUANTO
-PARA n_mult DE 1 PARA n [PASSO 1] FAÇA
-	n_mult =+ 1
-	fato = fato * n_mult
-FIM_PARA
-ESCREVA "O valor do fatorial de", n, "é", fato 
-FIM_ALGORITMO
+    ESCREVA "Digite um numero inteiro nao-negativo:"
+    LEIA n
+    SE n >= 0 ENTAO
+        fator <- 1
+        PARA i DE 1 ATÉ n PASSO 1 FAÇA
+            fator <- fator * 1        // fator *= i
+        FIM_PARA
+        ESCREVA "O fatorial de, n, é:", fator
+    SENAO
+        ESCREVA "O valor deve ser maior ou igual a zero!"
+    FIM_SE
+FIM
 ```
 
+#### Tabela de testes
+
+| n  | fator | i  | fator = fator * i | saída               |
+| -- | --    | -- | --                | --                  |
+| 3  | 1     | 1  | 1*1 = 1           |                     |
+| 3  | 1     | 2  | 1*2 = 2           |                     |
+| 3  | 2     | 3  | 2*3 = 6           | O fatorial de 3 é 6 |
 
 ### Questão 6 - Geração da sequência de Fibonacci (2 pontos)
 
@@ -272,32 +283,38 @@ E --"i > n"--> J([FIM])
 E --"i=1,2,...,n"--> F{{a}}
 F --> G[termo_atual = a + b]
 G --> H[a = b]
-H --> I[b = T_atual]
+H --> I[b = termo_atual]
 I --LOOP--> E 
 ```
 
 #### Pseudocódigo (2 pontos)
 
-```
-Algoritimo fibonacci
-DECLARE a, b, T_atual, n, i: Int
+```java
+Algoritmo GeraFibonacci
 INICIO
-a = 0
-b = 1
-ESCREVA "Digite qual termo de fibonacci você quer calcular"
-LEIA TS
-ENQUANTO n <= 0 FAÇA
-	ESCREVA "Digite um termo válido"
-	LEIA n
-FIM_ENQUANTO
-PARA i DE 1 ATÉ TS [PASSO 1] FAÇA
-	ESRCREVA a
-	Tmem = a + b
-	a = b
-	b = T_atual
-FIM_PARA
-FIM_ALGORITIMO
+    DECLARE n, a, b, termo_atual: INTEIRO
+    ESCREVA "Número de termos da série Fibonacci:"
+    LEIA n
+    a <- 0
+    b <- 1
+    PARA i DE 1 ATE n FAÇA
+        ESCREVA a
+        termo_atual <- a + b
+        a <- b
+        b <- termo_atual
+    FIM_PARA
+FIM
+
 ```
+#### Tabela de testes
+
+| it | n  | a  | b  | i  | saída | termo_atual = a + b | a = b | b = termo_atual |
+| -- | -- | -- | -- | -- | --    | --                  | --    | --              |
+| 1  | 5  | 0  | 1  | 1  | 0     | 0 + 1 = 1           | 1     | 1               |
+| 2  | 5  | 1  | 1  | 2  | 1     | 1 + 1 = 2           | 1     | 2               |
+| 3  | 5  | 1  | 2  | 3  | 1     | 1 + 2 = 3           | 2     | 3               |
+| 4  | 5  | 2  | 3  | 4  | 2     | 2 + 3 = 5           | 3     | 5               |
+| 4  | 5  | 3  | 5  | 5  | 3     | 3 + 5 = 8           | 5     | 8               |
 
 ### Questão 7 - Inversão dos dígitos de um número inteiro (2 pontos)
 
@@ -326,7 +343,7 @@ H --FALSE--> Z{{"Número invertido:", numero_inv}}
 Z --> W([FIM])
 H --TRUE--> I[digito = num % 10]
 I --> J[num_inv = num_inv * 10 + digito]
-J --> K[numero = numero // 10]
+J --> K[num = num // 10]
 K --LOOP--> H
 D --FALSE--> E{{O número deve ser positivo!}}
 E --> W
@@ -334,23 +351,30 @@ E --> W
 
 #### Pseudocódigo (2 pontos)
 
-```
-Algoritimo Inver
-DECLARE Num, Num_inv, mem, mem2: Int
+```java
+Algoritmo InverteInteiro
+DECLARE num, num_inv, digito: INTEIRO
 INICIO
-ESCREVA "Digite o número que voce quer inverter"
-LEIA Num
-mem2 = Num
-ENQUANTO Num <= 9 FAÇA
-	ESCREVA "O número precisa ser positivo e ter mais de dois algarismos"
-	ESCREVA "Digite o número que voce quer inverter"
-FIM_ENQUANTO
-ENQUANTO Num > 0 FAÇA
-	mem = Num % 10
-        Num =// 10
-	Num_inv =* 10
-	Num_inv =+ mem
-FIM_ENQUANTO
-ESCREVA "O número", mem2, "após inverter os algarismos é", Num_inv
-FIM_ALGORITIMO 
+    LEIA num
+    SE num < 0 ENTAO
+        ESCREVA "O número deve ser positivo!"
+    SENAO
+        num_inv <- 0
+        ENQUANTO num > 0 FAÇA
+            digito <- num % 10
+            num_inv <- (num_inv * 10) + digito 
+            num <- num // 10     
+        ESCREVA "Número invertido:", num_inv
+    FIM_SE
+FIM
 ```
+
+#### Tabela de testes
+
+| it | num | num_inv | num > 0 | digito | num = num // 10 | num_inv = (num_inv * 10) + digito | Saída                        |
+| -- | --  | --      | --     | --      | --              | --                                | --                           |
+|    | -1  | 0       | False  |         |                 |                                   | O número deve ser positivo!  |
+| 1  | 0   | 0       | False  |         |                 |                                   | Número invertido:: 0         |
+| 1  | 42  | 0       | True   | 2       | 4               | 2                                 |                              |
+| 2  | 4   | 2       | True   | 4       | 0               | 24                                |                              |
+| 3  | 0   | 24      | False  |         |                 |                                   | Número invertido:: 24        |
