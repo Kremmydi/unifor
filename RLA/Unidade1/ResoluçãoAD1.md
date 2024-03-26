@@ -95,43 +95,45 @@ Aceite apenas $n$ maior ou igual a zero.
 
 ```mermaid
 flowchart TD
-A([INICIO])
-A --> C[soma = 0]
-C --> D{{Digite o número de elementos do conjunto que você quer somar}}
-D --> E[/num_som/]
-E --> F{num_som > 0}
-F--FALSE--> G{{Digite uma quantidade válida}}
-G --> E
-G --TRUE--> H{num_som = num_somados}
-H --FALSE--> I{{Digite um número}}
-I --> J[/num/]
-J --> K[soma = soma + num]
-K --> L[num_somados =+ 1]
-L --> H
-H --TRUE--> M{{A valor da soma total é soma}}
-M --> N([FIM])
+A([INICIO]) --> B{{"Digite a quantidade de números<br> (n >= 0):"}}
+B --> C[\n\]
+C --> D{n >= 0}
+D --FALSE-->N{{"O valor deve ser maior ou igual a zero!"}}
+N --> M([FIM])
+D --TRUE--> E[/soma = 0/]
+E --> F[i = 1]
+F --> G{i <= n}
+G --FALSE--> L{{"A soma dos numeros é , soma"}}
+L --> M
+G --TRUE--> H{{Digite um número: }}
+H --> I[\num\]
+I --> J[soma =+ num]
+J --> K[i =+ 1]
+K --LOOP--> G
 ```
 
 #### Pseudocódigo (1 ponto)
-```
-Algoritmo soma_de_valores
-DECLARE num_somados, num_soma: Int
-	num, soma: Float
+
+```java
+Algoritmo SomaNumeros
+DECLARE n,i,soma: INTEIRO
 INICIO
-soma = 0
-ESCREVA "Digite o número de elementos do conjunto que você quer somar"
-LEIA num_soma
-ENQUANTO num_soma <= 0 FAÇA
-	ESCREVA "Digite uma quantidade válida"
-	LEIA num_soma
-FIM_ENQUANTO
-PARA num_somados DE 1 até Num_soma [PASSO 1] FAÇA
-	ESCREVA "Digite um número"
-	LEIA num
-	soma =+ num
-FIM_PARA
-ESCREVA "O valor da soma total é", soma
-FIM_ALGORITMO
+    ESCREVA "Digite a quantidade de números<br> (n >= 0):"
+    LEIA n
+    SE n >=0 ENTAO
+        soma <- 0
+        i <- i
+        ENQUANTO i <= n FAÇA
+            ESCREVA "Digite um número:"
+            LEIA num 
+            soma <- soma + num
+            i <- i + 1
+        FIM_ENQUANTO
+    SENAO
+        "O valor deve ser maior ou igual a zero!"
+    FIM_SE
+    ESCREVA "A soma dos numeros é , soma"
+FIM
 ```
 
 ### Questão 4 - Cálculo de uma série (1 ponto)
