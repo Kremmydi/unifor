@@ -68,17 +68,18 @@ K --LOOP--> F
 ALGORTIMO ContaAprovacoes
 DECLARE n, cont, nota, i: INTEIRO
 INICIO
-    //exibe a mensagem para a entrada de dados
+ //exibe a mensagem para a entrada de dados
     ESCREVA "Digite a quantidade de notas dos alunos:"
-    //armazena o valor da entrada na variável "n"
+//armazena o valor da entrada na variável "n"
     LEIA n
-    // Inicializa o contador de alunos aprovados
-    cont = 0        
-    PARA i DE 1 ATE n FAÇA
+// Inicializa o contador de alunos aprovados
+    cont = 0
+// Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 1 até n, incrementando 'i' em 1.
+    PARA i DE 1 ATE n PASSO 1 FAÇA
         ESCREVA "Digite a nota do aluno", i, ":"
         LEIA nota
         SE nota >= 50 E nota <= 100 ENTAO
-            // Incrementa o contador de alunos aprovados
+ // Incrementa o contador de alunos aprovados
             cont = cont + 1        
         FIM_SE
     FIM_PARA
