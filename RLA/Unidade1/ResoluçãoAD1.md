@@ -1,5 +1,6 @@
 # CONTEÚDO PRÁTICO
-## Dadas duas variáveis, a e b, implemente e teste um algoritmo para trocar os valores atribuídos a elas.
+### Questão 1
+Dadas duas variáveis, a e b, implemente e teste um algoritmo para trocar os valores atribuídos a elas.
 
 ```mermaid
 flowchart TD
