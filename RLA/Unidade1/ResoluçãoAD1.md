@@ -23,6 +23,7 @@ G --> H([FIM])
     3 b ← c
     4 a ← b
     5 c ← a
+    //exibe uma mensagem com os novos valores das variáveis
     6 ESCREVA a , b
 7 FIM_ALGORITMO
 
@@ -65,16 +66,20 @@ K --LOOP--> F
 
 ```java
 ALGORTIMO ContaAprovacoes
+DECLARE n, cont, nota, i: INTEIRO
 INICIO
-    DECLARE n, cont, nota, i: INTEIRO
+    //exibe a mensagem para a entrada de dados
     ESCREVA "Digite a quantidade de notas dos alunos:"
+    //armazena o valor da entrada na variável "n"
     LEIA n
-    cont = 0        // Inicializa o contador de alunos aprovados
+    // Inicializa o contador de alunos aprovados
+    cont = 0        
     PARA i DE 1 ATE n FAÇA
         ESCREVA "Digite a nota do aluno", i, ":"
         LEIA nota
         SE nota >= 50 E nota <= 100 ENTAO
-            cont = cont + 1        // Incrementa o contador de alunos aprovados
+            // Incrementa o contador de alunos aprovados
+            cont = cont + 1        
         FIM_SE
     FIM_PARA
     ESCREVA "O numero de alunos aprovados e:", cont
