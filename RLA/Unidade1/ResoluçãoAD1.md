@@ -13,7 +13,7 @@ G --> H([FIM])
 ```
 
 #### Pseudocódigo
-```
+```java
  ALGORITMO TrocaValores
  DECLARE a , b : inteiro;
     //variáveis "a" e "b" como dados de entrada
