@@ -14,12 +14,16 @@ G --> H([FIM])
 
 #### Pseudocódigo
 ```
-1 ALGORITMO TrocaValores
-2 DECLARE a , b : inteiro;
-3 b ← c
-4 a ← b
-5 c ← a
-6 ESCREVA a , b
+ ALGORITMO TrocaValores
+ DECLARE a , b : inteiro;
+    //variáveis "a" e "b" como dados de entrada
+    1 ESCREVA "Digite dois números"
+    2 LEIA a , b
+    //troca de valores das variáveis
+    3 b ← c
+    4 a ← b
+    5 c ← a
+    6 ESCREVA a , b
 7 FIM_ALGORITMO
 
 ```
