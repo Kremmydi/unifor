@@ -198,13 +198,19 @@ I --LOOP--> E
 Algoritmo SomaSerie
 DECLARE n,numerador,denominador: INTEIRO; S: REAL
 INICIO
+//exibe a mensagem para a entrada de dados
     ESCREVA "Digite o número de termos da série S:"
+//armazena o valor da variável "n"
     LEIA n
+//variável S iniciada com o valor de 0
     S <- 0
+    //laço de repetição com o contador i indo de 0 até n-1 incrementando 1 a cada looping
     PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
+        //processamento para calcular numerador e denominador
         numerador = 2 * i + 1
         denominador <- 2 * i + 2
         termo = numerador / denominador
+        //incrementação do termo dentro da séries
         S += termo
     FIM_PARA
     ESCREVA "Soma da série S é ", S
