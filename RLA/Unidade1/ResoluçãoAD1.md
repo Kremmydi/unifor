@@ -83,6 +83,7 @@ INICIO
             cont = cont + 1        
         FIM_SE
     FIM_PARA
+ //exibe uma mensagem apresentando a quantidade de alunos aprovados
     ESCREVA "O numero de alunos aprovados e:", cont
 FIM
 ```
