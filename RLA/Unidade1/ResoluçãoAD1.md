@@ -127,22 +127,33 @@ K --LOOP--> G
 
 ```java
 Algoritmo SomaNumeros
-DECLARE n,i,soma: INTEIRO        // Declaração de variáveis
+DECLARE n,i,soma: INTEIRO       
 INICIO
+    //exibe a mensagem para a entrada de dados
     ESCREVA "Digite a quantidade de números<br> (n >= 0):"
-    LEIA n        // Entrada de dados
-    SE n >=0 ENTAO        // Estrutura condicional
+    //armazena o valor da variável "n"
+    LEIA n
+ //estrutura condicional com base no valor da variável m        
+    SE n >=0 ENTAO  
+        //variável soma iniciada com o valor de 0
         soma <- 0
         i <- i
-        ENQUANTO i <= n FAÇA        // Teste de condição
+        //loop condicional (loop while) executa as instruções enquanto a condição "i <= n" for verdadeira
+        ENQUANTO i <= n FAÇA
+            //exibe uma mensagem para a entrada de uma outra variável       
             ESCREVA "Digite um número:"
-            LEIA num 
+            //armazena o valor da variável num
+            LEIA num
+            //incrementa a soma conforme a iteração da variável num
             soma <- soma + num
+            //incrementa a variável i
             i <- i + 1
-        FIM_ENQUANTO
+       FIM_ENQUANTO
     SENAO
+       //mensagem exibida caso a estrutura condicional seja falsa    
         "O valor deve ser maior ou igual a zero!"
     FIM_SE
+//exibe uma mensagem apresentando a soma dos números
     ESCREVA "A soma dos numeros é , soma"
 FIM
 ```
