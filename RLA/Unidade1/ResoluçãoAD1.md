@@ -401,16 +401,24 @@ E --> W
 Algoritmo InverteInteiro
 DECLARE num, num_inv, digito: INTEIRO
 INICIO
+    //exibe a mensagem para a entrada de dados
+    ESCREVA "Digite um número inteiro:"
+    //armazena o valor da variável num
     LEIA num
-    SE num < 0 ENTAO
-        ESCREVA "O número deve ser positivo!"
-    SENAO
+    //estrutura condicional baseada na variável num
+    SE num >= 0 ENTAO
+        //variável num_inv iniciada com o valor 0
         num_inv <- 0
+        //loop condicional (loop while) que executa as instruções enquanto a condição "num > 0" for verdadeira
         ENQUANTO num > 0 FAÇA
+            //determinar o último digito da variável num
             digito <- num % 10
             num_inv <- (num_inv * 10) + digito 
             num <- num // 10     
         ESCREVA "Número invertido:", num_inv
+    SENAO
+        //exibe uma mensagem de negação caso a estrutura condicional seja falsa
+        ESCREVA "O número deve ser positivo!"
     FIM_SE
 FIM
 ```
