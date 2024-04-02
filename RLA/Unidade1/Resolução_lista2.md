@@ -32,31 +32,31 @@ DECLARE num1, num2, num3, num4: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // dado de entrada para a primeira variável
     ESCREVA "Digite o número 1:"
 
-    // Insira seu comentário
+    // armazena a variável num1
     LEIA num1
 
-    // Insira seu comentário
+    // dado de entrada para a segunda variável
     ESCREVA "Digite o número 2:"
 
-    // Insira seu comentário
+    // armazena a variável num2
     LEIA num2
 
-    // Insira seu comentário
+    // dado de entrada para a terceira variável
     ESCREVA "Digite o número 3:"
 
-    // Insira seu comentário
+    // armazena a variável num3
     LEIA num3
 
-    // Insira seu comentário
+    // dado de entrada para a quarta variável
     ESCREVA "Digite o número 4:"
 
-    // Insira seu comentário
+    // armazena a variável num4
     LEIA num4
 
-    // Insira seu comentário
+    // calcula a média da soma das variáveis por 4
     media <- (num1 + num2 + num3 + num4)/4
     ESCREVA "A média é", media
 
@@ -91,16 +91,16 @@ DECLARE C, F: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // exibe a mensagem para a entrada de dados
     ESCREVA "Digite a temperatura em Celisus:"
 
-    // Insira seu comentário
+    // armazena a variável C como dado de entrada
     LEIA C
 
-    // Insira seu comentário
+    // calcula a temperatura em fahrenheit utilizando a fórmula de conversão
     F <- (9/5) * C + 32
 
-    // Insira seu comentário
+    // exibe a mensagem informando a temperatura em fahrenheit
     ESCREVA "A temperatura em Fahrenheit é", F, "graus"
 
 FIM
