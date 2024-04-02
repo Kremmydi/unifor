@@ -10,19 +10,41 @@ Represente, em fluxograma e pseudocódigo, um algoritmo para determinar se um n�
 #### Fluxograma 
 
 
-```mermaid
-flowchart TD
-A([INICIO]) --> B{{Digite um número:}}
-B --> C[\N\]
-C --> D{N >= 0}
-D --FALSE--> E[O número não é positivo!]
-D --TRUE--> F[resto = N % 2]
-E --> Z([FIM])
-F --> G{resto == 0}
-G --FALSE--> H{{O número é impar!}}
-G --TRUE--> I{{O número é par!}}
-H --> Z
-I --> Z
+```java
+ALGORTIMO verifica_par_impar
+DECLARE numero, resto: INTEIRO
+
+INICIO
+
+    // Insira seu comentário
+    ESCREVA "Digite um número: "
+    
+    // Insira seu comentário
+    LEIA numero
+    
+    // Insira seu comentário
+    SE numero >= 0 ENTAO
+
+        // Insira seu comentário
+        resto <- numero % 2
+
+        // Insira seu comentário
+        SE resto == 0 ENTAO
+            ESCREVA "O número é par!"
+
+        // Insira seu comentário
+        SENAO
+          ESCREVA "O número é impar!"
+
+        FIM_SE
+
+    // Insira seu comentário
+    SENAO             
+        ESCREVA "O número deve ser postivo!"
+
+    FIM_SE
+
+FIM
 ```
 
 #### Pseudocódigo 
