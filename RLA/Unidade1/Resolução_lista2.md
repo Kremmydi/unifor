@@ -175,37 +175,37 @@ INICIO
     ESCREVA "Digite outro número:"
     LEIA num2
 
-    // Insira seu comentário
+    // determinar a operação a ser utilizada entre as variáveis
     ESCOLHA
 
-        // Insira seu comentário
+        // executa as instruções caso a operação escolhida seja de soma (+)
         CASO op == 1
 
-            // Insira seu comentário
+            // calcula o resultado somando as variáveis num1 e num2
             res = num1 + num2
 
-            // Insira seu comentário
+            // exibe uma mensagem informando o resultado da soma
             ESCREVA num1, "+", num2, "=", res
 
-        // Insira seu comentário
+        // executa as instruções caso a operação escolhida seja subtração (-)
         CASO op == 2
 
-            // Insira seu comentário
+            // calcula o resultado subtraindo as variáveis num1 e num2
             res = num1 - num2
 
-            // Insira seu comentário
+            // exibe uma mensagem informando o resultado da subtração
             ESCREVA num1, "-", num2, "=", res
 
-        // Insira seu comentário
+        // executa as instruções caso a operação escolhida seja multiplicação (*)
         CASO op == 3
 
-            // Insira seu comentário
+            // calcula o resultado do produto das variáveis num1 e num2
             res = num1 * num2
 
-            // Insira seu comentário
+            // exibe uma mensagem informando o resultado da multiplicação 
             ESCREVA num1, "*", num2, "=", res
 
-        // Insira seu comentário
+        // executa as instruções caso a operação escolhida seja divisão (/)
         CASO op == 4
 
             // Insira seu comentário
