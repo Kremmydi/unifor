@@ -334,12 +334,19 @@ INICIO
     ESCREVA "Número de termos da série Fibonacci:"
     //armazena o valor da variável n
     LEIA n
+    //variável a iniciada com o valor de 0
     a <- 0
+    //variável b iniciada com o valor de 1
     b <- 1
+    //laço de repetição com o contador i indo de 1 até n
     PARA i DE 1 ATE n FAÇA
+        //armazena a variável a
         ESCREVA a
+        //armazena a variável "termo_atual" como soma das variáveis "a" e "b"
         termo_atual <- a + b
+        //define a variável "b" como "a"
         a <- b
+        //define a variável "termo_atual" como "b"
         b <- termo_atual
     FIM_PARA
 FIM
