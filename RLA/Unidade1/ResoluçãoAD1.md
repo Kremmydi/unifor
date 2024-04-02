@@ -263,15 +263,23 @@ H --> I
 ALGORITMO CalcFatorial
 DECLARE n: INTEIRO
 INICIO
+    //exibe a mensagem para a entrada de dados
     ESCREVA "Digite um numero inteiro nao-negativo:"
+    //armazena o valor da variável "n"
     LEIA n
+    //estrutura condicional baseada na variável n
     SE n >= 0 ENTAO
+        //variável fator iniciada com o valor de 1
         fator <- 1
+        //laço de repetição com o contador i indo de 1 até n incrementando 1 a cada looping
         PARA i DE 1 ATÉ n PASSO 1 FAÇA
-            fator <- fator * 1        // fator *= i
+            //incrementação o fator multiplicado pela variável 1
+            fator <- fator * i        // fator *= i
         FIM_PARA
+        //exibe uma mensagem apresentando a fatorial da variável
         ESCREVA "O fatorial de, n, é:", fator
     SENAO
+        //exibe uma mensagem caso a condicional seja falsa
         ESCREVA "O valor deve ser maior ou igual a zero!"
     FIM_SE
 FIM
@@ -320,9 +328,11 @@ I --LOOP--> E
 
 ```java
 Algoritmo GeraFibonacci
+DECLARE n, a, b, termo_atual: INTEIRO
 INICIO
-    DECLARE n, a, b, termo_atual: INTEIRO
+    //exibe a mensagem para a entrada de dados
     ESCREVA "Número de termos da série Fibonacci:"
+    //armazena o valor da variável n
     LEIA n
     a <- 0
     b <- 1
