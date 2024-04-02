@@ -208,22 +208,22 @@ INICIO
         // executa as instruções caso a operação escolhida seja divisão (/)
         CASO op == 4
 
-            // Insira seu comentário
+            // executa as instruções caso a variável num2 seja diferente de 0
             SE num2 != 0 ENTAO
 
-                // Insira seu comentário
+                // calcula o resultado da razão entre as variéveis num1 e num3=2
                 res = num1 / num2
 
-                // Insira seu comentário
+                // exibe uma mensagem informando o resultado da divisão
                 ESCREVA num1, "/", num2, "=", res
 
-            // Insira seu comentário
+            // executa a instrução se a variável num2 for igual a 0
             SENAO
                 ESCREVA "Impossível dividir!"
 
             FIM_SE
 
-    // Insira seu comentário
+    // executa a instrução caso nenhuma das operações seja selecionada
     SENAO
         ESCREVA "Operação inválida!"
 
