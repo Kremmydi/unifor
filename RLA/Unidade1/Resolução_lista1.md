@@ -1,5 +1,5 @@
 # UNIFOR
-**Nome**: Gustavo Mendonça de Sousa Meneses
+**Nome**: Gustavo Mendonça de Sousa Meneses <br>
 **Disciplina**: Raciocínio lógico algorítmico
 
 ## Lista de exercícios 01
