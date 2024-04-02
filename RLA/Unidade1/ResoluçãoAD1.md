@@ -1,4 +1,15 @@
-# CONTEÚDO PRÁTICO
+<img src="https://drive.google.com/uc?id=1SOzRTjUt7cuBJpSqoK90fcAiKBrnpUJo" width="400">
+
+**Curso:** Engenharia da Computação <br>
+**Disciplina:** Raciocínio lógico e algoritmo <br>
+**Código/Turma:** T998-21 / T998-31 <br>
+**Professor:** Ricardo Carubbi <br>
+**Data:**  <br>
+**Aluno(a):** Gustavo Mendonça de Sousa Meneses <br>
+**Matrícula:** 2410332 <br>
+
+**1a chamada (Sim/Não):** preencha com a opção correta <br>
+**2a chamada (Sim/Não):** preencha com a opção correta
 ### Questão 1
 Dadas duas variáveis, a e b, implemente e teste um algoritmo para trocar os valores atribuídos a elas.
 
