@@ -31,31 +31,31 @@ DECLARE numero, resto: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para a entrada de dados
     ESCREVA "Digite um número: "
     
-    // Insira seu comentário
+    // armazena a variável numero como dado de entrada
     LEIA numero
     
-    // Insira seu comentário
+    // executa as instruções caso a condição "numero >= 0" seja verdadeira
     SE numero >= 0 ENTAO
 
-        // Insira seu comentário
+        // Calcula o resto da divisão de "numero" por 2
         resto <- numero % 2
 
-        // Insira seu comentário
+        // executa a instrução se o resto for igual a 0
         SE resto == 0 ENTAO
             ESCREVA "O número é par!"
 
-        // Insira seu comentário
+        // executa a instrução se o resto não for igual a zero
         SENAO
           ESCREVA "O número é impar!"
 
         FIM_SE
 
-    // Insira seu comentário
+    // // Executa a instrução caso a variável tenha atribuido valor negativo
     SENAO             
-        ESCREVA "O número deve ser postivo!"
+        ESCREVA "O número não é postivo!"
 
     FIM_SE
 
@@ -96,23 +96,23 @@ DECLARE sal_atual, sal_reaj: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // exibe a mensagem para a entrada de dados
     ESCREVA "Digite seu salário atual:"
 
-    // Insira seu comentário
+    // armazena a variável "sal_atual" como dado de entrada
     LEIA sal_atual
 
-    // Insira seu comentário
+    // Executa instruções caso a condição "sal_atual <= 500" for verdadeira
     SE sal_atual <= 500 ENTAO
         sal_reaj = sal_atual * 1.2
 
-    // Insira seu comentário
+    // executa a instrução caso o salário atual seja superior a R$500
     SENAO
         sal_reaj = sal_atual * 1.1
 
     FIM_SE
 
-    // Insira seu comentário
+    // Exibe a mensagem relativa ao novo salário estabelecido
     ESCREVA "O novo salário é R$", sal_reaj
 
 FIM
@@ -156,35 +156,35 @@ DECLARE nota1, nota2, media: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // mensagem de entrada para a primeira variável
     ESCREVA "Digite a nota 1:"
 
-    // Insira seu comentário
+    // armazena a variável nota1
     LEIA nota1
 
-    // Insira seu comentário
+    // Mensagem de entrada para a segunda variável
     ESCREVA "Digite a nota 2:"
 
-    // Insira seu comentário
+    // Armazena a variável nota2
     LEIA nota2
 
-    // Insira seu comentário
+    // Executa as instruções caso as condições "nota1 >= 0" e "nota1 >= 0" forem verdadeiras
     SE nota1 >= 0 E nota2 >= 0 ENTAO
 
-        // Insira seu comentário
+        // calcula a média da soma das vatiáveis nota1 e nota2
         media =  (nota1 + nota2)/2
 
-        // Insira seu comentário
+        // executa as instruções caso a condição "media >= 7" seja verdadeira
         SE media >= 7 ENTAO
             ESCREVA "O aluno está aprovado!"
 
-        // Insira seu comentário
+        // executa as instruções caso a média das notas seja menor que 7
         SENAO
             "O aluno está reprovado!"
 
         FIM_SE
 
-    // Insira seu comentário
+    // executa as instruções caso ambas ou uma das notas seja negativa
     SENAO
         ESCREVA "A nota deve ser maior que zero!"
 
@@ -231,24 +231,24 @@ DECLARE idade, anos_apto: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // exibe a mensagem para a entrada de dados
     ESCREVA ""Digite a sua idade:"
 
-    // Insira seu comentário
+    // armazena a variável "idade" como dado de entrada
     LEIA idade
 
-    // Insira seu comentário
+    // exibe a mensgem caso a variável seja negativa
     SE idade < 0 ENTAO
         ESCREVA "A idade deve ser maior que zero!"
 
-    // Insira seu comentário
+    // executa as instruções caso a condição "idade < 0" seja falsa
     SENAO
 
-        // Insira seu comentário
+        // exibe a mensagem caso a condição "idade >= 18" seja verdadeira
         SE idade >= 18 ENTAO
             ESCREVA "O candidato está apto a tirar a CNH!"
 
-        // Insira seu comentário
+        // executa as instruções caso a idade do candidado seja inferior a 18 anos
         SENAO
 
             // Insira seu comentário
