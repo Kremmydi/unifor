@@ -346,7 +346,7 @@ INICIO
         termo_atual <- a + b
         //define a variável "b" como "a"
         a <- b
-        //define a variável "termo_atual" como "b"
+        //define a variável "termo_atual" como "b" , atualizando-as para dar continuidade à sequência de fibonacci
         b <- termo_atual
     FIM_PARA
 FIM
