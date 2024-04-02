@@ -251,10 +251,10 @@ INICIO
         // executa as instruções caso a idade do candidado seja inferior a 18 anos
         SENAO
 
-            // Insira seu comentário
+            // calcula o tempo restante para tirar a CNH subtraindo 18 pela idade do candidato
             anos_apto <- 18 - idade
 
-            // Insira seu comentário
+            // exibe uma mensagem informando quantos anos faltam para o candidato tirar a CNH
             ESCREVA "Faltam", anos_apto, "ano(s) para o candidato estar apto!"
 
         FIM_SE
