@@ -158,20 +158,20 @@ DECLARE op: INTEIRO; num1,num2,res: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // exibe uma mensagem armazenando as quatro operações básicas
     ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
 
-    // Insira seu comentário
+    // 
     ESCREVA "Digite uma operação:"
 
     // Insira seu comentário
     LEIA op
 
-    // Insira seu comentário
+    // variável num1 como dado de entrada
     ESCREVA "Digite um número:"
     LEIA num1
 
-    // Insira seu comentário
+    // variável num2 como dado de entrada
     ESCREVA "Digite outro número:"
     LEIA num2
 
