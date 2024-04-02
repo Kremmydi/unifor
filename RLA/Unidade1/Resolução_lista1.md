@@ -27,7 +27,7 @@ ALGORTIMO verifica_par_impar
 DECLARE numero, resto: INTEIRO
 
 INICIO
-
+```java
     // Insira seu comentário
     ESCREVA "Digite um número: "
     
@@ -55,7 +55,7 @@ INICIO
         ESCREVA "O número deve ser postivo!"
 
     FIM_SE
-
+```
 FIM
 #### Teste de mesa (0,25 ponto)
 | N | N >= 0 | resto | resto == 0 | Saída |
