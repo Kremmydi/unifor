@@ -411,10 +411,13 @@ INICIO
         num_inv <- 0
         //loop condicional (loop while) que executa as instruções enquanto a condição "num > 0" for verdadeira
         ENQUANTO num > 0 FAÇA
-            //determinar o último digito da variável num
+            //determinar o último digito da variável num calculando o resto de sua divisão por 10
             digito <- num % 10
-            num_inv <- (num_inv * 10) + digito 
-            num <- num // 10     
+            //atualiza a variável num_inv
+            num_inv <- (num_inv * 10) + digito
+            //substitui o valor da varável num pela sua divisão inteira por 10
+            num <- num // 10
+        //exibe uma mensagem apresentando a inversão dos valores da variável num     
         ESCREVA "Número invertido:", num_inv
     SENAO
         //exibe uma mensagem de negação caso a estrutura condicional seja falsa
