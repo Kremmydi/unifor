@@ -32,7 +32,7 @@ I --> J{{"b =", b}}
 
 ```java
 ALGORTIMO TrocaValores
-DECLARE a,b,axu: REAL
+DECLARE a,b,aux: REAL
 
 INICIO
 
