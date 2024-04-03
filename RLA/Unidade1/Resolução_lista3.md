@@ -75,7 +75,9 @@ F --LOOP--> E
 ALGORTIMO MultiploTres
 DECLARE n: INTEIRO
 INICIO
+  //exibe uma mensagem para a entrada de dados
   ESCREVA "Digite a quantidade de números:"
+  //armazena a variável n
   LEIA n
   PARA i DE 0 ATÉ n-1 PASSO 3 FAÇA
     ESCREVA i
