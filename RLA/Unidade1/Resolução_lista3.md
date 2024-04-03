@@ -3,8 +3,7 @@
 **Disciplina**: Raciocínio lógico algorítmico
 
  ## Lista de exercícios
-
- ### Exercício 01 (2.5 pontos)
+### Exercício 01 (2.5 pontos)
 Atualize o algoritmo para determinar se um número inteiro e positivo é par ou ímpar, usando uma laço condicional para aceitar apenas números maiores ou iguais a zero. 
 
 #### Fluxograma (1.0 ponto)
@@ -29,20 +28,49 @@ G --LOOP--> D
 
 ```java
 ALGORTIMO verifica_par_impar
-DECLARE numero, resto: INTEIRO
-ESCREVA "Digite um número: "
+DECLARE num, resto: INTEIRO
+
 INICIO
-  LEIA numero
-  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
-    resto ← numero % 2                 // calcula o resto da divisão por 2
-    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
-      ESCREVA "O número é par!"
-    SENAO
-      ESCREVA "O número é impar!"
-    FIM_SE
-  SENAO                                // caso inteiro for negativo (condição linha 5)
-    ESCREVA "O número deve ser postivo!"
-  FIM_SE
+
+	// Entrada do usuário de um número inteiro qualquer armezando na variável "num"
+	ESCREVA "Digite um número: "
+
+	// Armazena o valor de entrada na variável "num"
+	LEIA num
+
+	// Loop condicional (loop while) executa as instruções enquanto a condição "num < 0" for verdadeira
+	ENQUANTO num < 0 FAÇA
+
+		// Exibe a mensagem com a solicitação de um número ao usuário
+		ESCREVA "Digite um número maior ou igual a zero:"
+
+		// Um novo número é atribuido na variável "num"
+		LEIA num
+
+	FIM_ENQUANTO
+
+	// Executa as instruções sob a condição "num >= 0" for verdadeira
+	SE num >= 0 ENTAO
+
+		// Calcula o resto da divisão de "num" por 2
+		resto ← num % 2
+               
+		// Executa a instrução se o resto é igual a zero
+		SE resto == 0 ENTAO
+			ESCREVA "O número é par!"
+
+		// Executa a instrução se o resto não for igual a zero
+		SENAO
+			ESCREVA "O número é impar!"
+
+		FIM_SE
+
+	// Executa a instrução se inteiro for negativo
+	SENAO                               
+		ESCREVA "O número deve ser postivo!"
+
+	FIM_SE
+
 FIM
 ```
 
@@ -74,14 +102,23 @@ F --LOOP--> E
 ```java
 ALGORTIMO MultiploTres
 DECLARE n: INTEIRO
+
 INICIO
-  //exibe uma mensagem para a entrada de dados
-  ESCREVA "Digite a quantidade de números:"
-  //armazena a variável n
-  LEIA n
-  PARA i DE 0 ATÉ n-1 PASSO 3 FAÇA
-    ESCREVA i
-  FIM_PARA
+
+	// Variável n como dado de entrada
+	ESCREVA "Digite a quantidade de números:"
+
+	// Armazena o valor de entrada na variável "n"
+	LEIA n
+
+	//  Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 0 até n-1, incrementando 'i' em 3.
+	PARA i DE 0 ATÉ n-1 PASSO 3 FAÇA
+
+		// Exibe a mensagem relativa ao i em cada iteração
+		ESCREVA i
+
+	FIM_PARA
+
 FIM
 ```
 
@@ -135,18 +172,41 @@ I --LOOP--> E
 ```java
 ALGORITMO SomaValores
 DECLARE n,i: INTEIRO; soma,num: REAL
+
 INICIO
-  ESCREVA "Digite a quantidade de números:"
-  LEIA n
-  soma <- 0
-  i <- 1
-  ENQUANTO i <= n FAÇA
-    ESCREVA "Digite o número", i,":"
-    LEIA num
-    soma <- soma + num
-    i <- i + 1
-  FIM_ENQUANTO
-  ESCREVA "A soma dos número é", soma
+
+	// Dado de entrada armezenado na variável n
+	ESCREVA "Digite a quantidade de números:"
+
+	// Armazena o valor de entrada na variável "n"
+	LEIA n
+
+	// Inicializa a variável "soma" em 0
+	soma <- 0
+
+	// Inicializa a variável "i" em 1
+	i <- 1
+
+	// Loop condicional (loop while) executa as instruções enquanto a condição "i <= n" for verdadeira
+	ENQUANTO i <= n FAÇA
+
+		// Exibe a mensagem solictando o número em cada iteração
+		ESCREVA "Digite o número", i,":"
+
+		// Armazena o valor de entrada na variável "num"
+		LEIA num
+
+		// Incrementa "num" na variável "soma" em cada iteração
+		soma <- soma + num
+
+		// Incrementa 1 na variável "num" em cada iteração
+		i <- i + 1
+
+	FIM_ENQUANTO
+
+	// Exibe a mensagem concatenando aos caracteres "A soma dos número é" com a variável "soma".
+	ESCREVA "A soma dos número é", soma
+
 FIM
 ```
 
@@ -170,50 +230,84 @@ Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([soma = 0])
-B --> C[quant = 0]
-C --> D[nota = 0]
+A([INICIO]) --> B[/soma/]
+B --> C[/cont/]
+C --> D{{"Digite a nota do aluno (nota negativa finaliza): "}}
 D --> E{nota >= 0}
-E --FALSE--> F{quant > 0}
-F --FALSE--> M([FIM])
-F --TRUE--> K[media = soma / quant]
-K --> L{{Foram lidas, quant, notas. <br>A média aritmética é, media!}}
-L --> M
-E --TRUE--> G{{"Digite a nota do aluno <br>(nota negativa encerra o algortimo): "}}
-G --> H[/nota/]
-H --> I[soma += nota]
-I --> J[quant += 1]
-J --LOOP--> E
+E --FALSE--> F{cont > 0}
+F --FALSE--> Z([FIM]) 
+F --TRUE--> G[media = soma / cont]
+G --> H{{Foram lidas, cont, notas. A média aritmética é, media!}}
+H --> Z
+E --TRUE--> I[soma += nota]
+I --> J[cont += 1]
+J --> K{{"Digite a nota do aluno (nota negativa finaliza): "}}
+K --LOOP-->  E
 ```
 
 #### Pseudocódigo
 
 ```java
 ALGORTIMO QuantMedia
-DECLARE quant: INT; soma, nota, media: REAL
+DECLARE nota, soma, media: REAL; cont: INTEIRO
+
 INICIO
-  soma <- 0
-  quant <- 0
-  nota <- 0
-  ENQUANTO nota >= 0 FAÇA
-    ESCREVA "Digite a nota do aluno (nota negativa encerra o algortimo:"
-    LEIA nota
-    soma <- soma + nota
-    quant <- quant + 1
-    SE quant > 0 ENTAO
-      media <- soma / quant
-  ESCREVA "Foram lidas", quant, "notas. A média aritmética é", media, "!"
+	
+	// Entrada do usuário da primeira nota
+	ESCREVA "Digite a nota do aluno (nota negativa finaliza): "
+
+	// Armazena o valor de entrada na variável "nota"
+	LEIA nota
+	
+	// Inicialização das variáveis soma e cont
+	soma <- 0
+	cont <- 0
+	
+	// Loop condicional para execucar as instruções até que a nota seja negativa
+	ENQUANTO nota >= 0 FAÇA
+
+		// Incrementa "nota" à variável "soma" a cada iteração
+		soma <- soma + nota
+
+		// Incrementa em 1 na variável "cont" a cada iteração
+		cont <- cont + 1
+
+		// Solicita uma nota de outro aluno, sendo valores negativos permitem a saída do loop condicional (loop while)
+		ESCREVA "Digite a nota do aluno (nota negativa finaliza): "
+
+		// Reatribui um novo valor na variável "nota"
+		LEIA nota
+
+	FIM_ENQUANTO
+
+	// Condição para exibir a contagem e média das notas se a variável cont for maior que zero.
+	SE cont > 0 ENTÃO
+
+		// Calcula a média das notas dos alunos aprovados
+		media <- soma / cont
+
+		// Exibe a mensagem com o número de alunos aprovados e a média geral
+		ESCREVA "Foram lidas", cont, "nota(s). A média aritmética é", media
+
+	FIM_SE
+
 FIM
 ```
 
-#### Tabela de testes (0.5 ponto)
+#### Tabela de testes
 
-| it  | soma | quant | nota | nota  | soma + nota | quant + 1 | media    | saída                                         | 
-| --  | --   | --    | --   | --    | --          | --        | --       | --                                            |
-| 1   | 0    | 0     | 0    | 0     | 0           | 0+1=1     | 0/1=0    |                                               |
-| 2   | 0    | 0     | 0    | -1    |             |           |          |                                               |
-| 1   | 0    | 0     | 0    | -1    |             |           |          |                                               |
-| 1   | 0    | 0     | 0    | 40    | 0+40=40     | 0+1=1     |          |                                               |
-| 2   | 0    | 0     | 0    | 60    | 40+60=100   | 1+1=2     |          |                                               |
-| 3   | 0    | 0     | 0    | 20    | 100+20=120  | 2+1=3     |          |                                               |
-| 4   | 0    | 0     | 0    | -1    |             |           | 120/3=40 | Foram lidas 3 notas. A média aritmética é 40! |
+| it  | nota  | soma  | cont | nota >= 0 | soma + nota     | cont + 1 | nota    | cont > 0 | media          | saída                                            | 
+| --  | --    | --    | --   | --        | --              | --       | --      | --       | --             | --                                               |
+| 1   | -1.0  | 0.0   | 0    | False     |                 |          |         | False    |                |                                                  |
+
+| it  | nota  | soma  | cont | nota >= 0 | soma + nota     | cont + 1 | nota    | cont > 0 | media          | saída                                            | 
+| --  | --    | --    | --   | --        | --              | --       | --      | --       | --             | --                                               |
+| 1   | 0.0   | 0.0   | 0    | True      | 0.0+0.0 = 0.0   | 0+1 = 1  | -1.0    |          |                |                                                  |
+| 2   | -1.0  | 0.0   | 1    | False     |                 |          |         | True     | 0.0/1 = .0     | Foram lidas 1 nota(s). A média aritmética é 0.0! |
+
+| it  | nota  | soma  | cont | nota >= 0 | soma + nota     | cont + 1 | nota    | cont > 0 | media          | saída                                            | 
+| --  | --    | --    | --   | --        | --              | --       | --      | --       | --             | --                                               |
+| 1   | 4.0   | 0.0   | 0    | True      | 0.0+4.0 = 4.0   | 0+1 = 1  | 8.0     |          |                |                                                  |
+| 2   | 8.0   | 4.0   | 1    | True      | 4.0+8.0 = 12.0  | 1+1 = 2  | 6.0     |          |                |                                                  |
+| 3   | 6.0   | 12.0  | 2    | True      | 12.0+6.0 = 18.0 | 2+1 = 3  | -8.0    |          |                |                                                  |
+| 4   | -8.0  | 18.0  | 3    |           |                 |          |         | True     | 18.0/3.0 = 6.0 | Foram lidas 3 nota(s). A média aritmética é 6.0! |
