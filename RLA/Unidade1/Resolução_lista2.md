@@ -164,7 +164,7 @@ INICIO
     // 
     ESCREVA "Digite uma operação:"
 
-    // Insira seu comentário
+    // armazena a variável op
     LEIA op
 
     // variável num1 como dado de entrada
