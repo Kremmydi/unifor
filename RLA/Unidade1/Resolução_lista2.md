@@ -161,7 +161,7 @@ INICIO
     // exibe uma mensagem armazenando as quatro operações básicas
     ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
 
-    // 
+    // exibe uma mensagem para a entrada de dados
     ESCREVA "Digite uma operação:"
 
     // armazena a variável op
