@@ -105,21 +105,33 @@ DECLARE n, cont, nota, i: INTEIRO
 INICIO
  //exibe a mensagem para a entrada de dados
     ESCREVA "Digite a quantidade de notas dos alunos:"
+
 //armazena o valor da entrada na variável "n"
     LEIA n
+
 // Inicializa o contador de alunos aprovados
     cont = 0
+
 // Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 1 até n, incrementando 'i' em 1.
     PARA i DE 1 ATE n PASSO 1 FAÇA
+
+ //exibe uma mensagen para a entrada de dados (a variável i mudará conforme o início de um novo looping) 
         ESCREVA "Digite a nota do aluno", i, ":"
+
+        // armazena um novo valor na variável nota a cada looping
         LEIA nota
+
+        // executa instruções caso as condições "nota >= 50" e "nota <= 100" sejam verdadeiras
         SE nota >= 50 E nota <= 100 ENTAO
- // Incrementa o contador de alunos aprovados
+
+        // Incrementa o contador de alunos aprovados
             cont = cont + 1        
         FIM_SE
     FIM_PARA
+
  //exibe uma mensagem apresentando a quantidade de alunos aprovados
     ESCREVA "O numero de alunos aprovados e:", cont
+
 FIM
 ```
 
@@ -172,7 +184,8 @@ INICIO
     SE n >=0 ENTAO  
         //variável soma iniciada com o valor de 0
         soma <- 0
-        i <- i
+        //variável i iniciada com o valor de 1
+        i <- 1
         //loop condicional (loop while) executa as instruções enquanto a condição "i <= n" for verdadeira
         ENQUANTO i <= n FAÇA
             //exibe uma mensagem para a entrada de uma outra variável       
@@ -181,10 +194,10 @@ INICIO
             LEIA num
             //incrementa a soma conforme a iteração da variável num
             soma <- soma + num
-            //incrementa a variável i
+            //incrementa a variável i em 1
             i <- i + 1
        FIM_ENQUANTO
-    ////exibe uma mensagem informando que o valor armazenado na variável deve ser 0 ou positivo
+    //exibe uma mensagem informando que o valor armazenado na variável deve ser 0 ou positivo
     SENAO
         "O valor deve ser maior ou igual a zero!"
     FIM_SE
