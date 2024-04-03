@@ -8,8 +8,8 @@
 **Aluno(a):** Gustavo Mendonça de Sousa Meneses <br>
 **Matrícula:** 2410332 <br>
 
-**1a chamada (Sim/Não):** preencha com a opção correta <br>
-**2a chamada (Sim/Não):** preencha com a opção correta
+**1a chamada (Sim/Não):** Não <br>
+**2a chamada (Sim/Não):** Sim
 ### Questão 1
 Dadas duas variáveis, a e b, implemente e teste um algoritmo para trocar os valores atribuídos a elas.
 
