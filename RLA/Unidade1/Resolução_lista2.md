@@ -279,49 +279,49 @@ DECLARE idade: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // exibe uma mensagem para a entrada de dados
     ESCREVA "Digite a idade do aluno:"
 
-    // Insira seu comentário
+    // armazena a variável "idade" para representar a idade do aluno
     LEIA idade
 
-    // Insira seu comentário
+    // condição do tipo caso
     ESCOLHA
 
-        // Insira seu comentário
+        // executa as instruções caso a condição "idade >=5 E idade <= 7" seja verdadeira
         CASO idade >=5 E idade <= 7
 
-            // Insira seu comentário
+            // exibe uma mensagem categorizando o aluno como Infantil A
             ESCREVA "Infantial A"
 
-        // Insira seu comentário
+        // executa as instruções caso a condição "idade >=8 E idade <= 10" seja verdadeira
         CASO idade >=8 E idade <= 10
 
-            // Insira seu comentário
+            // exibe uma mensagem categorizando o aluno como Infantil B
             ESCREVA "Infantial B"
 
-        // Insira seu comentário
+        // executa as instruções caso a condição "idade >=11 E idade <= 13" seja verdadeira
         CASO idade >=11 E idade <= 13
 
-            // Insira seu comentário
+            // exibe uma mensagem categorizando o aluno como Juvenil A
             ESCREVA "Juvenil A"
 
-        // Insira seu comentário
+        // executa as instruções caso a condição "idade >=14 E idade <= 17" seja verdadeira
         CASO idade >=14 E idade <= 17
 
-            // Insira seu comentário
+            // exibe uma mensagem categorizando o aluno como Juvenil B
             ESCREVA "Juvenil B"
 
-        // Insira seu comentário
+        // executa as instruções caso a condição "idade >=18" seja verdadeira
         CASO idade >=18
 
-            // Insira seu comentário
+            // exibe uma mensagem categorizando o aluno como Adulto
             ESCREVA "Adulto"
 
-    // Insira seu comentário
+    // executa as instruções caso a idade do aluno não se encaixe em nenhuma categoria
     SENAO
 
-        // Insira seu comentário
+        // exibe a mensagem solicitando o envio de uma idade válida
         ESCREVA "Digite uma idade válida!"
 
     FIM_ESCOLHA
