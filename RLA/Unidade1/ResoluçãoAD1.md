@@ -48,18 +48,18 @@ INICIO
     // armazena o segundo valor de entrada na variável b
     LEIA b
 
-    // troca o valor de a por aux (aux=a)
+    // armazena o valor de a na variável temporária aux (aux = a)
     aux <- a 
 
-    // troca o valor de b por a (b=a)
+    // troca o valor de b por a (a = b)
     a <- b
 
-    // troca o valor de aux por b(aux=b)
+    // troca o valor de aux por  b(b = aux)
     b <- aux
 
     // exibe uma mensagem informando os novbos valores das variáveis 
-    ESCREVA "a=", a (novo valor de "a" = "a")
-    ESCREVA "b=", b (novo valor de "b" = "aux")
+    ESCREVA "a=", a (novo valor de "a" = "b")
+    ESCREVA "b=", b (novo valor de "b" = "a")
 
 FIM
 ```
