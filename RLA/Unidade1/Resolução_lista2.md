@@ -1,5 +1,5 @@
 <img src="https://drive.google.com/uc?id=1SOzRTjUt7cuBJpSqoK90fcAiKBrnpUJo" width="400">
-**Nome**: Gustavo Mendonça <br>
+**Nome**: Gustavo Mendonça de Sousa Meneses <br>
 **Disciplina**: Raciocínio lógico algorítmico
 
  ## Lista de exercícios 02
