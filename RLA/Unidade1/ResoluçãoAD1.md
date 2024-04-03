@@ -254,9 +254,11 @@ INICIO
     S <- 0
     //laço de repetição com o contador i indo de 0 até n-1 incrementando 1 a cada looping
     PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
-        //processamento para calcular numerador e denominador
+        //processamento para calcular o numerador
         numerador = 2 * i + 1
+        //processamento oara calcular o denominador
         denominador <- 2 * i + 2
+        //calcula o termo dividindo o numerador pelo denominador
         termo = numerador / denominador
         //incrementação do termo dentro da séries
         S += termo
@@ -320,7 +322,7 @@ INICIO
         fator <- 1
         //laço de repetição com o contador i indo de 1 até n incrementando 1 a cada looping
         PARA i DE 1 ATÉ n PASSO 1 FAÇA
-            //incrementação o fator multiplicado pela variável 1
+            //incrementação o fator multiplicado pela variável i
             fator <- fator * i        // fator *= i
         FIM_PARA
         //exibe uma mensagem apresentando a fatorial da variável
