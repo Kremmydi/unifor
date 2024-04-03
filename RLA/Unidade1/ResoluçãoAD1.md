@@ -168,7 +168,7 @@ INICIO
     ESCREVA "Digite a quantidade de números<br> (n >= 0):"
     //armazena o valor da variável "n"
     LEIA n
- //estrutura condicional com base no valor da variável m        
+ //executa as instruções desde que a condição "n >=0" seja verdadeira      
     SE n >=0 ENTAO  
         //variável soma iniciada com o valor de 0
         soma <- 0
@@ -184,8 +184,8 @@ INICIO
             //incrementa a variável i
             i <- i + 1
        FIM_ENQUANTO
+    ////exibe uma mensagem informando que o valor armazenado na variável deve ser 0 ou positivo
     SENAO
-       //mensagem exibida caso a estrutura condicional seja falsa    
         "O valor deve ser maior ou igual a zero!"
     FIM_SE
 //exibe uma mensagem apresentando a soma dos números
