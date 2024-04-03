@@ -4,7 +4,7 @@
 **Disciplina:** Raciocínio lógico e algoritmo <br>
 **Código/Turma:** T998-21 / T998-31 <br>
 **Professor:** Ricardo Carubbi <br>
-**Data:**  <br>
+**Data:** 03/04/2024  <br>
 **Aluno(a):** Gustavo Mendonça de Sousa Meneses <br>
 **Matrícula:** 2410332 <br>
 
