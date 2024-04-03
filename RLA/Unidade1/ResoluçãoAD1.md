@@ -13,32 +13,55 @@
 ### Questão 1
 Dadas duas variáveis, a e b, implemente e teste um algoritmo para trocar os valores atribuídos a elas.
 
+#### Fluxograma
+
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{Digite dois números}} 
-B --> C[/a , b/]
-C --> D[b == c]
-D --> E[a == b]
-E --> F[c == a]
-F --> G{{a , b}}
-G --> H([FIM])
+A([INICIO]) --> B{{"Digite o valor da a:"}}
+B --> C[\a\]
+C --> D{{"Digite o valor da b:"}}
+D --> E[\b\]
+E --> F[aux = a]
+F --> G[a = b]
+G --> H[b = aux]
+H --> I{{"a =", a}}
+I --> J{{"b =", b}}
 ```
 
-#### Pseudocódigo
-```java
- ALGORITMO TrocaValores
- DECLARE a , b : inteiro;
-    //variáveis "a" e "b" como dados de entrada
-    1 ESCREVA "Digite dois números"
-    2 LEIA a , b
-    //troca de valores das variáveis
-    3 b ← c
-    4 a ← b
-    5 c ← a
-    //exibe uma mensagem com os novos valores das variáveis
-    6 ESCREVA a , b
-7 FIM_ALGORITMO
+#### Pseudocódigo (1 ponto)
 
+```java
+ALGORTIMO TrocaValores
+DECLARE a,b,axu: REAL
+
+INICIO
+
+    // exibe mensagem para a entrada de dados (variável a)
+    ESCREVA "Digite o valor da a:"
+
+    // armazena o primeiro valor de entrada na variável a
+    LEIA a
+
+    // exibe mensagem para a entrada de dados (variável b)
+    ESCREVA "Digite o valor da b:"
+
+    // armazena o segundo valor de entrada na variável b
+    LEIA b
+
+    // troca o valor de a por aux (aux=a)
+    aux <- a 
+
+    // troca o valor de b por a (b=a)
+    a <- b
+
+    // troca o valor de aux por b(aux=b)
+    b <- aux
+
+    // exibe uma mensagem informando os novbos valores das variáveis 
+    ESCREVA "a=", a (novo valor de "a" = "a")
+    ESCREVA "b=", b (novo valor de "b" = "aux")
+
+FIM
 ```
 ### Questão 2 - Contagem (1 ponto)
 
