@@ -156,13 +156,13 @@ DECLARE nota1, nota2, media: REAL
 
 INICIO
 
-    // mensagem de entrada para a primeira variável
+    // Mensagem para a entrada de dados na primeira variável
     ESCREVA "Digite a nota 1:"
 
-    // armazena a variável nota1
+    // Armazena a variável nota1
     LEIA nota1
 
-    // Mensagem de entrada para a segunda variável
+    // Mensagem para a entrada de dados na segunda variável
     ESCREVA "Digite a nota 2:"
 
     // Armazena a variável nota2
